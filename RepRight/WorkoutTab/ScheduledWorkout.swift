@@ -68,9 +68,6 @@ struct ScheduledWorkout: View {
                         }
                     }.padding()
                 }
-                
-
-        
     }
 }
 
