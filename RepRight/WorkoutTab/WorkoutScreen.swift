@@ -10,7 +10,12 @@ import SwiftUI
 struct WorkoutScreen: View {
     var body: some View {
         VStack{
-            ScheduledWorkout()
+//                    ScrollView{
+            
+                ScheduledWorkout()
+                Custom_Preset()
+            
+//                    }.scrollIndicators(.hidden)
         }
     }
 }
