@@ -19,9 +19,11 @@ struct ContentView: View {
             TabView(selection: $selectedTab) {
                 Tab("Workout", systemImage: "dumbbell.fill", value: .workout) {
                     ScheduledWorkout()
+                    Custom_Preset()
                 }
                 Tab("summary", systemImage: "list.clipboard", value: .summary) {
                     Text("Summary page to be")
+                    
                 }
             }
         }

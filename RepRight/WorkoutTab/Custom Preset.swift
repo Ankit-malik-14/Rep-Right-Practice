@@ -9,10 +9,18 @@ import SwiftUI
 
 struct Custom_Preset: View {
     var body: some View {
-        VStack{
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            Text("Hii")
-        }
+        ScrollView{
+            HStack{
+                ForEach(1...10,id: \.self){ i in
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 20)
+                            .foregroundStyle(.background.secondary)
+                            .frame(width: 180,height: 160)
+                        Text("Body part \(i)")
+                    }
+                }
+            }
+        }.navigationTitle("Presets")
     }
 }
 
