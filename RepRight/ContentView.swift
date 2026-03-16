@@ -18,8 +18,8 @@ struct ContentView: View {
         VStack{
             TabView(selection: $selectedTab) {
                 Tab("Workout", systemImage: "dumbbell.fill", value: .workout) {
-                    ScheduledWorkout()
-                    Custom_Preset()
+                    ScheduledWorkoutCard()
+                    CustomPreset()
                 }
                 Tab("summary", systemImage: "list.clipboard", value: .summary) {
                     Text("Summary page to be")
