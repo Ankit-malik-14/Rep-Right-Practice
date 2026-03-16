@@ -9,16 +9,17 @@ import SwiftUI
 
 struct WorkoutScreen: View {
     var body: some View {
-        VStack{
-//                    ScrollView{
-            
-                ScheduledWorkout()
+        ScrollView(.vertical, showsIndicators: false) {
+            VStack(alignment: .leading){
+
+                    ScheduledWorkoutCard()
+                    
+                    CustomPreset()
                 
-                Custom_Preset()
-            
-                Presets_Bodyparts()
-            
-//                    }.scrollIndicators(.hidden)
+                    PresetsBodyparts()
+                    
+                    ExerciseList()
+            }
         }
     }
 }

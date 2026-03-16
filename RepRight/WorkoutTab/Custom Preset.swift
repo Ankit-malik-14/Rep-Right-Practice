@@ -7,23 +7,37 @@
 
 import SwiftUI
 
-struct Custom_Preset: View {
+struct CustomPreset: View {
     var body: some View {
-        ScrollView{
-            HStack{
-                ForEach(1...10,id: \.self){ i in
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 20)
-                            .foregroundStyle(.background.secondary)
-                            .frame(width: 180,height: 160)
-                        Text("Body part \(i)")
+        
+            VStack{
+                HStack{
+                    Text("Custom")
+                        .font(.largeTitle.bold())
+                    Spacer()
+                    Button("See all") {
+                        //
+                    }.buttonStyle(.borderless)
+                        .tint(.orange)
+                }.padding()
+                
+                ScrollView(.horizontal){
+                    HStack{
+                        ForEach(1...10,id: \.self){ i in
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 20)
+                                    .foregroundStyle(.background.secondary)
+                                    .frame(width: 180,height: 160)
+                                Text("Body part \(i)")
+                            }
+                        }
                     }
                 }
+                .scrollIndicators(.hidden)
             }
-        }.navigationTitle("Presets")
     }
 }
 
 #Preview {
-    Custom_Preset()
+    CustomPreset()
 }
